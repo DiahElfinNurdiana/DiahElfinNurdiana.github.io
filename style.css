@@ -222,7 +222,7 @@ form.cari{
   font-size: 20px;
   text-align: center;
   border-radius: 10px;
-  margin-left: 50px;
+
 }
 .item h1{
   font-size: 15px;
@@ -532,5 +532,8 @@ input.tambahproduk:hover {
   input[type=submit]:hover{
     background:#003366;
     opacity:0.7;
+  }
+  img.produk{
+    margin-left: 50px;
   }
 }
