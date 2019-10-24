@@ -43,6 +43,21 @@ input.Signin{
   background: rgb(0 0 0 0.10);
   color: black;
 }
+
+form.Pesan{
+  position: absolute;
+  float: left;
+}
+
+input.Pesan{
+  width: 210px;
+  height: 45px;
+  border-radius: 15px;
+  border: none;
+  background: rgba(0 0 0 0,10);
+  color: black;
+}
+
 input.loginin{
   width: 210px;
   height: 45px;
@@ -99,7 +114,7 @@ input.Login [type="password"] {
   border: 2px solid #305d60;
   background: #faf6d9;
 }
-}
+
 form.gaminge{
   color: #9BFFFF;
   font-family: myanmar text;
@@ -219,6 +234,12 @@ form.cari{
   color: #fc7900;
   font-family: sans-serif;
   text-align: center;
+  margin-top: 0px;
+}
+.item a{
+  font-size: 13px;
+  font-family: sans-serif;
+  text-align: right;
   margin-top: 0px;
 }
 input.button{
