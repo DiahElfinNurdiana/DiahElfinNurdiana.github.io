@@ -148,7 +148,7 @@ li.kategori:hover ul.isi-kategori{
   border-bottom: none;
 }
 ul.isi-kategori a:hover {
-  color: blue !important;
+  color: blue ;
   border-bottom: none;
 }
 ul.isi-kategori{
@@ -158,7 +158,7 @@ ul.isi-kategori{
   background-color: #f9f9f9;
 }
 ul.isi-kategori a{
-  color: #383636 !important;
+  color: #383636 ;
 }
 }
 .navigasi li :hover{
