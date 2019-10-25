@@ -80,14 +80,7 @@ form.Login{
   margin : 20px auto;
   text-align: center;
 }
-form.register{
-  background-color: rgba(255,255,255,1);
-  border-radius: 10px;
-  padding: 20px 20px 20px 20px;
-  width: 320px;
-  margin : 20px auto;
-  text-align: center;
-}
+
 }
 input{
   padding: 3px;
@@ -120,20 +113,7 @@ form.gaminge{
   font-family: myanmar text;
   font-size: 180%;
 }
-form.WithOnetech{
-  color: #4b4b4b;
-  font-family: myanmar text;
-  font-size: 160%;
-  margin-top: -4%;
-}
-input.selengkapnya{
-  width: 15%;
-  height: 45px;
-  border: none;
-  background: #1d9fb6;
-  color: white;
-  font-size: 120%;
-}
+
 }
 div.contentindex{
   margin-top: 10%;
@@ -284,20 +264,7 @@ h3{
   color: #252a2a;
   text-decoration: none;
 }
-#message {
-  display:none;
-  background-color: rgba(255,255,255,0.5);
-  color: #000;
-  position: absolute;
-  padding: 5%;
-  margin-top: -32%;
-  margin-left: 5%;
-  width: 17%;
-  height: 35%;
-}
-#message p {
-  font-size: 100%;
-}
+
 .valid {
   color: green;
 }
@@ -324,17 +291,7 @@ h2.judul-produk{
   width: 30%;
   border-radius: 0px;
 }
-.card {
-  background-color: rgba(255,255,255,0.5);
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,1);
-  max-width: 30%;
-  margin: auto;
-  text-align: center;
-  font-family: arial;
-  font-size: 1,4vw;
-  margin-left: 37%;
-  margin-top: -2%
-}
+
 img.gambar-produk{
   padding-top: 7%;
   width: 70%;
@@ -346,43 +303,7 @@ p.deskripsi{
   color: #534d51;
   font-size: 1.4vw;
 }
-.card button {
-  border: none;
-  outline: 0;
-  padding: 3%;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 2vw;
-}
-.card button:hover {
-  opacity: 0.7;
-}
-input.Signup:hover {
-  background-color: #252a2a;
-  border-color: #278fa2;
-  border-style: solid;
-}
-input.Signin:hover {
-  background-color: #252a2a;
-  border-color: #ecb40e;
-  border-style: solid;
-}
-input.alamat-tujuan{
-  position: absolute;
-  margin-top: -4%;
-  margin-left: 40%;
-  width: 15%;
-  height:28px;
-  background-color: rgba(255,255,255,0.4);
-  border-style: none;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.5);
-}
-input.alamat-tujuan::placeholder{
-  color: #434441;
-}
+
 input.tambahproduk:hover {
   opacity: 0.7;
 }
