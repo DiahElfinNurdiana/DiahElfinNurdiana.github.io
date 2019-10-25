@@ -7,9 +7,10 @@
 <body>
 	<div class="wrap">
 		<h2> Silahkan Login </h2>
-		<form>
+		<form action="#" method="POST" onSubmit="validasi()">
 			<input type="text" name="username" placeholder="Username" size="40"><br><br>
-			<input type="password" name="password" placeholder="Password" size="40"> <br><br><br><br>
+			<input id="password" type="password" name="password" onkeyup="validate()" placeholder="Password" size="40"> <br><br><br><br>
+			<small id="tanggapan"></small>
 			<input type ="submit" value="Login">
 			<center><p>Belum punya akun? <a href="SignUp.html"> Sign Up </a> </p></center>
 			<center><p>Atau</p></center>
@@ -19,4 +20,18 @@
 
 </div>
 </body>
+<script type="text/javascript">
+	function validasi() {
+		var username = document.getElementById("username").value;
+		var password = document.getElementById("password").value;
+
+		if (username != "" && password!="") {
+			return true;
+		}else{
+			alert('Anda harus mengisi data dengan lengkap !');
+		}
+	}
+</script>
+<script type="text/javascript" src="javascript/validasi.js"></script>
+
 </html>
