@@ -32,34 +32,43 @@
 </div>
 </body>
 <script src="jquery.js"></script>
-<script>
-    $(document).ready(function () {
-        $("#imgUpload").change(function () {
-            var File = this.files;
-            if (File && File[0]) {
-                ReadImage(File[0]);
+    <script type="text/javascript">
+        $.fn.uploadGambar = function () { //extending jquery
+                this.change(function(event) {
+                    if(this.files.length > 0){
+                        console.log(this.files[0]);
+                        var name = this.files[0].name;
+                        var size = this.files[0].size;
+                        var ukuran = "";
+                        if (size >= 1000000 ) { //MB
+                            size = Math.ceil(size/1000000);
+                            ukuran = size + "MB";
+                        }
+                        else if (size >= 1000) { //KB
+                            size = Math.ceil(size/1000);
+                            ukuran = size + "KB";
+                        }
+                        else if(size < 1000){
+                            ukuran = size + "Byte";
+                        }
+
+                        $("#info").html(`
+                            <p>Nama File : `+name+`</p>
+                            <p>Ukuran File : `+ukuran+`</p>
+                            `
+                        );
+
+                        if (this.files && this.files[0]) {
+                        var reader = new FileReader();
+                        reader.onload = function(e) {
+                            $('#preview').show();
+                            $('#preview').attr('src', e.target.result);
+                        }
+                        reader.readAsDataURL(this.files[0]);
+                        }
+                    }
+                });
             }
-        })
-    })
-
-    var ReadImage = function (file) {
-        var reader = new FileReader;
-        var image = new Image;
-
-        reader.readAsDataURL(file);
-        reader.onload = function (_file) {
-            image.src = _file.target.result;
-            image.onload = function () {
-                var height = this.height;
-                var width = this.width;
-                var type = file.type;
-                var size = ~~(file.size / 1024) + "KB";
-
-                $("#targetImg").attr('src', _file.target.result);
-                $("#description").text("Size:" + size + ", " + height + " X " + width + ", " + type + "");
-                $("#imgPreview").show();
-            }
-        }
-    }
-</script>
+            $("#img").uploadGambar();
+    </script>
 </html>
