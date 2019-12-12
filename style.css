@@ -516,14 +516,7 @@ input.tambahproduk:hover {
   }
   .nextback{
     padding: 80px 80px 0px 80px;
-    }
-#back{
-    float: left;
-    font-family: 'Segoe UI';
-    background-color: rgb(183, 206, 207);
-    font-size: 15px;
-    color:rgb(22, 82, 105);
-}
+  }
 #next{
     float: right;
     font-family: 'Segoe UI';
