@@ -55,5 +55,44 @@
       </div>
 
     </div>
+    <div class="nextback">
+
+                          <button id="next"> More>> ></button>
+                      </div>
+
+                      <script src="jquery3.4.1.js"></script>
+                      <script type="text/javascript">
+                          $(document).ready(function() {
+                              $("#next").click(function() {
+                                  $(".macam-produk").hide();})
+                          })
+                                  $(document).ready(function(){
+                                      console.log('doc ready');
+                                  })
+                                  $.getJSON('menunext.json',function(data){
+                                      console.log(data);
+                                      })
+                                      $("#next").click(function(event){
+                                          $(".macam-produk").remove();
+                                          $.ajax({
+                                              url: "menunext.json",
+                                              type: 'GET',
+                                              dataType: 'json',
+                                          })
+                                          .done(function(hasil) {
+                                              console.log("success");
+                                              var gabung = "";
+                                              $.each(hasil, function(index, val) {
+                                                  gabung += ` <td class="alpha"><img id="`+val.id+`" src="`+val.img+`"style="width:90px;height:90px;"><br>alpha</a></td>`;
+                                                  })
+
+                                                  $(".macam-produk").append(gabung);
+                                                  $(".macam-produk").remove();
+                                          })
+                                          .fail(function(){
+                                              console.log("eror");
+                                          })
+                                      })
+                      </script>
   </body>
 </html>
